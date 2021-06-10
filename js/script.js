@@ -52,8 +52,7 @@ var arr2 = [1,2,3];
 function fondi(arr1,arr2) {
     var arrNuovo = [];
     for (i = 0; i < arr1.length; i++) {
-        arrNuovo.push(arr1[i]);
-        arrNuovo.push(arr2[i]);    
+        arrNuovo.push(arr1[i],arr2[i]);
     }
     return arrNuovo;
 }
