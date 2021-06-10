@@ -66,9 +66,11 @@ console.log(fondi(arr1,arr2));
 function cap(string) {
         var arr = [];
         var stringa = '';
+        // controllo se è una parola o piu parole 
         if (string.includes(' ')){
             string += ' ';
-
+            
+            // se sono piu parole le divido inserendole in un array 
             for( var i = 0; i < string.length; i++) {
                 if (string[i] == ' ') {
                     arr.push(string.substring(0,i))
@@ -77,8 +79,11 @@ function cap(string) {
                 }
             }
         } else {
+            // se è una parola la capitalizzo 
             stringa = string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
         }
+
+        // capitalizzo ogni singola parola dell'array e poi riformo la stringa di input
         for (var i = 0; i < arr.length; i++) {
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase();
             stringa += arr[i] + ' ';
