@@ -43,3 +43,19 @@ function verificaLunghezza (prima,seconda) {
         console.log('la prima è piu lunga: ' + prima);
     }
 }
+
+
+// Scrivi una funzione che fonda due array (con lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro. Es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+var arr1 = ['a','b','c'];
+var arr2 = [1,2,3];
+function fondi(arr1,arr2) {
+    var arrNuovo = [];
+    for (i = 0; i < arr1.length; i++) {
+        arrNuovo.push(arr1[i]);
+        arrNuovo.push(arr2[i]);    
+    }
+    return arrNuovo;
+}
+
+console.log(fondi(arr1,arr2));
