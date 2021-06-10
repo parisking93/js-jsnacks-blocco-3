@@ -24,3 +24,22 @@ while (maxUtente < 0 || maxUtente > 8 || isNaN(maxUtente) || minUtente < 0 || mi
 }
 var x = newArray(['gino','franco','3','pasquale','cristian','6','7','carmelo','edo'],minUtente,maxUtente).reverse();
 console.log(x);
+
+
+
+// Dare la possibilità di inserire due parole. Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.  Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due.
+alert('adesso inserisci due parole e verifica qual\'è la piu lunga');
+var parola1 = prompt('prima parola');
+var parola2 = prompt('seconda parola');
+
+verificaLunghezza(parola1,parola2);
+
+function verificaLunghezza (prima,seconda) {
+    if (prima.length == seconda.length) {
+        console.log('sono lunghe uguali: ' + prima + ' ' + seconda);
+    } else if (prima.length < seconda.length) {
+        console.log('la seconda è piu lunga: ' + seconda);
+    } else {
+        console.log('la prima è piu lunga: ' + prima);
+    }
+}
