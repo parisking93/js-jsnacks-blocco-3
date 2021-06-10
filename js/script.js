@@ -51,10 +51,41 @@ var arr1 = ['a','b','c'];
 var arr2 = [1,2,3];
 function fondi(arr1,arr2) {
     var arrNuovo = [];
-    for (i = 0; i < arr1.length; i++) {
+    for (var i = 0; i < arr1.length; i++) {
         arrNuovo.push(arr1[i],arr2[i]);
     }
     return arrNuovo;
 }
 
 console.log(fondi(arr1,arr2));
+
+
+
+// Scrivi una funzione che prenda una stringa e la trasformi con l'iniziale maiuscola e tutto il resto in minuscolo.
+
+function cap(string) {
+        var arr = [];
+        var stringa = '';
+        if (string.includes(' ')){
+            string += ' ';
+
+            for( var i = 0; i < string.length; i++) {
+                if (string[i] == ' ') {
+                    arr.push(string.substring(0,i))
+                    string = string.substring(++i,string.length);
+                    i = 0;
+                }
+            }
+        } else {
+            stringa = string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+        }
+        for (var i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase();
+            stringa += arr[i] + ' ';
+        }
+        return stringa;
+}
+var userInput = prompt('dammi una parola o una frase da Capitalize');
+console.log(cap(userInput));
+
+
